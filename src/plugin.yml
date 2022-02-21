@@ -2,3 +2,10 @@ main: fr.kirecprod.cityofstonks.CityOfStonks
 author: kirecprod
 name: City Of Stonks
 version: 1.0
+commands:
+  furnace:
+    description: permet de cuire automatiquement l'objet dans la main
+    permission: cos.furnace
+  craft:
+    description: permet d'ouvrir une table de craft
+    permission: cos.craft
