@@ -10,23 +10,23 @@ public class CityOfStonks extends JavaPlugin {
     private static CityOfStonks instance;
 
     public void onLoad() {
-        System.out.println(ChatColor.AQUA + "[ CityOfStonks ] : Le Plugin démarre");
+        System.out.println("[ CityOfStonks ] : Le Plugin démarre");
     }
 
 
 
     public void onEnable() {
         saveDefaultConfig();
-        System.out.println(ChatColor.AQUA + "[ CityOfStonks ] : Le plugin a démarré avec succès");
+        System.out.println("[ CityOfStonks ] : Le plugin a démarré avec succès");
 
-        getCommand("craft").setExecutor(new CommandCraft());
-        getCommand("furnace").setExecutor(new CommandFurnace());
+        getCommand("craft").setExecutor(new CommandCraft(this));
+        getCommand("furnace").setExecutor(new CommandFurnace(this));
 
 
     }
 
     public void onDisable() {
-        System.out.println(ChatColor.AQUA + "[ CityOfStonks ] : Le plugin s'est arrêté");
+        System.out.println("[ CityOfStonks ] : Le plugin s'est arrêté");
     }
 
 

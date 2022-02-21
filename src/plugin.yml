@@ -1,6 +1,6 @@
 main: fr.kirecprod.cityofstonks.CityOfStonks
 author: kirecprod
-name: City Of Stonks
+name: CityOfStonks
 version: 1.0
 commands:
   furnace:

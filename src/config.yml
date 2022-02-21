@@ -1,5 +1,4 @@
-messageCraft: "vous avez ouvert la table de craft"
-
-messageNotFurnaceRecipe: "ceci ne peut pas ce cuire"
-
-messageNotPlayer: "cette commande ne fonctionne que pour les joueurs"
+messages:
+  OpenCraft: "&bvous avez ouvert la table de craft"
+  NotFurnaceRecipe: "&bceci ne peux pas être cuit"
+  NotPlayer: "&ccette commande ne fonctionne que pour les joueurs"
