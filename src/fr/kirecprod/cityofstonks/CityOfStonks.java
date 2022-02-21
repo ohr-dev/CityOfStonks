@@ -1,25 +1,35 @@
 package fr.kirecprod.cityofstonks;
 
-import com.sun.istack.internal.logging.Logger;
-import fr.kirecprod.cityofstonks.listeners.SheepListener;
-import org.bukkit.Bukkit;
+import fr.kirecprod.cityofstonks.command.CommandCraft;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class CityOfStonks extends JavaPlugin {
 
+    private static CityOfStonks instance;
+
     public void onLoad() {
-        Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "[ CityOfStonks ] : Le Plugin démarre");
+        System.out.println(ChatColor.AQUA + "[ CityOfStonks ] : Le Plugin démarre");
     }
 
-    public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "[ CityOfStonks ] : Le plugin a démarré avec succès");
 
-        Bukkit.getServer().getPluginManager().registerEvents(new SheepListener(), this);
+
+    public void onEnable() {
+        saveDefaultConfig();
+        System.out.println(ChatColor.AQUA + "[ CityOfStonks ] : Le plugin a démarré avec succès");
+
+        getCommand("craft").setExecutor(new CommandCraft());
+
+
     }
 
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "[ CityOfStonks ] : Le plugin s'est arrêté");
+        System.out.println(ChatColor.AQUA + "[ CityOfStonks ] : Le plugin s'est arrêté");
+    }
+
+
+    public static CityOfStonks getInstance(){
+        return instance;
     }
 
 }
